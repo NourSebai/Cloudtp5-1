@@ -22,4 +22,4 @@ const chefSchema = new mongoose.Schema({
 
 const ChefModel = mongoose.model('Chef', chefSchema);
 
-module.exports = Chef;
+module.exports = ChefModel;

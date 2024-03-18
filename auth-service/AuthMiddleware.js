@@ -4,10 +4,10 @@ const verifyToken = (req, res, next) => {
   const token = req.headers.authorization;
 
   if (!token) {
-    return res.status(401).json({ message: 'Token non fourni. Authentification nécessaire.' });
+    return res.status(401).json({ message: 'Authentification nécessaire.' });
   }
 
-  jwt.verify(token, 'your_secret_key', (err, decoded) => {
+  jwt.verify(token, '', (err, decoded) => {
     if (err) {
       return res.status(403).json({ message: 'Token invalide.' });
     }
