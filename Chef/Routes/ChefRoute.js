@@ -8,7 +8,6 @@ router.get('/all', async (req, res) => {
     const chefs = await ChefModel.find();
     res.status(200).json(chefs);
   } catch (error) {
-    console.error('Erreur lors de la récupération des chefs :', error);
     res.status(500).json({ message: 'Une erreur est survenue lors de la récupération des chefs.' });
   }
 });
